@@ -757,13 +757,7 @@
 <script setup lang="ts">
 import { ref, onMounted, reactive } from 'vue';
 
-type State = {
-  stateName: string;
-  abbreviation: string;
-  capital: string;
-};
-
-const states = ref<State[]>([]);
+const states = ref<any[]>([]);
 const stateColors = reactive<{ [key: string]: string }>({
   al: '#d0d0d0', // Alabama
   ak: '#d0d0d0', // Alaska
@@ -830,7 +824,7 @@ const stateCapital = ref('Guess the capital of ');
 const playerInput = ref('');
 const showInput = ref(true);
 
-const randomIntFromInterval = (min, max) => {
+const randomIntFromInterval = (min: number, max: number) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
@@ -876,16 +870,13 @@ const isInMap = () => {
 const checkCorrect = () => {
   let guess = playerInput.value;
   notQuiteBool.value = false;
-  console.log(guess);
-  if (guess.toUpperCase().trim() == states.value[stateNumber.value][2].toUpperCase().trim()) {
+  const value = states.value[stateNumber.value]?.[2] || '';
+  const formattedValue = typeof value === 'string' ? value.toUpperCase().trim() : '';
+  if (guess.toUpperCase().trim() == formattedValue) {
     playerInput.value = '';
     scoreString.value = 'Score: ' + score.value;
     isInMap();
-  } else if (
-    guess !== '' &&
-    guess.toUpperCase().trim() !== states.value[stateNumber.value][2].toUpperCase().trim() &&
-    attempts.value > 1
-  ) {
+  } else if (guess !== '' && guess.toUpperCase().trim() !== formattedValue && attempts.value > 1) {
     playerInput.value = '';
     notQuiteBool.value = true;
     attempts.value--;
