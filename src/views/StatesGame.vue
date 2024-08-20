@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="page">
     <div class="header-box">
-      <h1>STATE CAPITAL GUESSING GAME</h1>
+      <h1>STATE CAPITAL GAME</h1>
     </div>
     <div class="map">
       <!-- width="959" height="593" viewBox="-50 -100 1000 1000" -->
