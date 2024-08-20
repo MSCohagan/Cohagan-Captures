@@ -464,7 +464,11 @@
             <title>Wyoming</title>
           </path>
 
-          <path class="dc" d="m 803.5,252 -2.6,-1.8 -1,1.7 .5,.4 .4,.1 .6,.5 .3,.7 -.1,.5 .2,.5 z">
+          <path
+            :fill="stateColors.dc"
+            class="dc"
+            d="m 803.5,252 -2.6,-1.8 -1,1.7 .5,.4 .4,.1 .6,.5 .3,.7 -.1,.5 .2,.5 z"
+          >
             <title>District of Columbia</title>
           </path>
         </g>
@@ -720,7 +724,13 @@
           />
         </g>
 
-        <circle class="state borders dccircle dc" cx="801.6" cy="252.1" r="5">
+        <circle
+          :fill="stateColors.dc"
+          class="state borders dccircle dc"
+          cx="801.6"
+          cy="252.1"
+          r="5"
+        >
           <title>District of Columbia</title>
         </circle>
 
@@ -808,7 +818,8 @@ const stateColors = reactive<{ [key: string]: string }>({
   wa: '#d0d0d0', // Washington
   wv: '#d0d0d0', // West Virginia
   wi: '#d0d0d0', // Wisconsin
-  wy: '#d0d0d0' // Wyoming
+  wy: '#d0d0d0', // Wyoming
+  dc: '#d0d0d0'
 });
 const alreadyGuessed = ref(new Map());
 const score = ref(0);
