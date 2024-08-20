@@ -27,3 +27,4 @@ jobs:
           server: ftp.dqa.pau.temporary.site
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          servir-dir: /public-html
