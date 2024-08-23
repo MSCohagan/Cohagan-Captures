@@ -12,7 +12,7 @@
         <b-tooltip label="State Capital Guessing Game" position="is-top">
           <div>
             <a class="states-link" href="/statesGame">
-              <b-image src="src/assets/states.svg" class="states-svg" />
+              <b-image :src="require(`src/assets/us.svg`)" class="states-svg" />
             </a>
           </div>
         </b-tooltip>
@@ -20,7 +20,9 @@
     </b-carousel>
   </section>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+declare var require: any;
+</script>
 <style lang="css">
 .header {
   display: flex;
