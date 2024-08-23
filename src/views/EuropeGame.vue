@@ -4,7 +4,7 @@
       <h1 class="is-size-3">EUROPEAN CAPITAL GUESSING GAME</h1>
     </section>
     <section class="section map">
-      <svg version="1.1" viewBox="100 -30 500 700"
+      <svg version="1.1" viewBox="100 -30 500 500"
       style="width: 100%; height: 100%" id="svg3157" xmlns="http://www.w3.org/2000/svg">
         <title id="title4">Countries of Europe</title>
         <defs id="defs3159">
