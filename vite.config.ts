@@ -15,7 +15,8 @@ export default defineConfig({
           vendor: ['vue'] // Adjust this based on your actual dependencies
         }
       }
-    }
+    },
+    chunkSizeWarningLimit: 1200 // Increase limit from the default 500 kB to 1200 kB
   },
   plugins: [vue(), vueDevTools()],
   resolve: {
