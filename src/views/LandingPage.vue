@@ -9,10 +9,20 @@
     <b-carousel>
       <b-carousel-item>
         <h3>State Capital Guessing Game</h3>
-        <b-tooltip label="State Capital Guessing Game" position="is-top">
+        <b-tooltip label="State Capital Guessing Game" position="is-bottom">
           <div>
             <a class="states-link" href="/statesGame">
-              <b-image :src="require(`src/assets/states.svg`)" class="states-svg" />
+              <img src="../assets/us.png" class="states-png" />
+            </a>
+          </div>
+        </b-tooltip>
+      </b-carousel-item>
+      <b-carousel-item>
+        <h3>European Capital Guessing Game</h3>
+        <b-tooltip label="State Capital Guessing Game" position="is-bottom">
+          <div>
+            <a class="states-link" href="/statesGame">
+              <img src="../assets/europe.svg" class="europe-svg" />
             </a>
           </div>
         </b-tooltip>
@@ -20,9 +30,7 @@
     </b-carousel>
   </section>
 </template>
-<script setup lang="ts">
-declare var require: any;
-</script>
+<script setup lang="ts"></script>
 <style lang="css">
 .header {
   display: flex;
@@ -43,7 +51,11 @@ declare var require: any;
   justify-content: center;
 }
 
-.states-svg {
+.states-png {
+  max-width: 50%;
+}
+
+.europe-svg {
   max-width: 50%;
 }
 </style>
