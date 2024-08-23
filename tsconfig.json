@@ -14,6 +14,7 @@
   "compilerOptions": {
     "paths": {
       "@views/*": ["./src/views/*"]
-    }
+    },
+    "types": ["node"]
   }
 }
