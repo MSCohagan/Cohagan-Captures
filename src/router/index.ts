@@ -4,7 +4,7 @@ import StatesGame from '../views/StatesGame.vue';
 import EuropeGame from '../views/EuropeGame.vue';
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes: [
     {
       path: '/',
