@@ -12,7 +12,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           // Create a separate chunk for large dependencies
-          vendor: ['vue', 'axios'] // Adjust this based on your actual dependencies
+          vendor: ['vue'] // Adjust this based on your actual dependencies
         }
       }
     }
