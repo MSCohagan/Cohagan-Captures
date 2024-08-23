@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import LandingPage from '@/views/LandingPage.vue';
-import StatesGame from '@/views/StatesGame.vue';
-import EuropeGame from '@/views/EuropeGame.vue';
+import LandingPage from '../views/LandingPage.vue';
+import StatesGame from '../views/StatesGame.vue';
+import EuropeGame from '../views/EuropeGame.vue';
 
 const router = createRouter({
   history: createWebHistory(),

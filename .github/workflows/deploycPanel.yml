@@ -16,6 +16,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: List files in src/views
+        run: ls -R src/views
+
       - name: 🔨 Build Project
         run: |
           npm install
