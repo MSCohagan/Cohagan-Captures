@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import StatesGame from '../views/StatesGame.vue';
-import LandingPage from '../views/LandingPage.vue';
+//import LandingPage from '../views/LandingPage.vue';
 import EuropeGame from '../views/EuropeGame.vue';
 
 const router = createRouter({
@@ -10,7 +10,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: LandingPage
+      component: StatesGame
     },
     {
       path: '/statesGame',
