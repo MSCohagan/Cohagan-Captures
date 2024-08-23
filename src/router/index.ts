@@ -20,11 +20,6 @@ const router = createRouter({
       path: '/europeGame',
       name: 'EuropeGame',
       component: EuropeGame
-    },
-    {
-      path: '/*',
-      name: 'index',
-      redirect: '/'
     }
   ]
 });

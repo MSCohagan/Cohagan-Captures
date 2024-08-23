@@ -12,9 +12,9 @@
     }
   ],
   "compilerOptions": {
-    "paths": {
-      "@views/*": ["./src/views/*"]
-    },
     "types": ["node", "vue"]
-  }
+  },
+  "include": ["./**/*"],
+  "exclude": ["node_modules", "dist"],
+  "outDir": "./dist"
 }
