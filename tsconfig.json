@@ -12,11 +12,13 @@
     }
   ],
   "compilerOptions": {
-    "types": ["node", "vue"],
+    "types": ["node", "vue", "vite/client"],
     "esModuleInterop": true,
+    "target": "ESNext",
     "moduleResolution": "NodeNext",
     "module": "NodeNext",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
   },
   "include": ["./**/*"],
   "exclude": ["node_modules", "dist"],
