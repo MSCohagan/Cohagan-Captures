@@ -1,26 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import StatesGame from '../views/StatesGame.vue';
-import LandingPage from '../views/LandingPage.vue';
-import EuropeGame from '../views/EuropeGame.vue';
-
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: '/',
       name: 'home',
-      component: LandingPage
+      component: () => import('../views/LandingPage.vue')
     },
     {
       path: '/statesGame',
       name: 'statesGame',
-      component: StatesGame
+      component: () => import('../views/StatesGame.vue')
     },
     {
       path: '/europeGame',
       name: 'europeGame',
-      component: EuropeGame
+      component: () => import('../views/EuropeGame.vue')
     }
   ]
 });
