@@ -1,9 +1,9 @@
 <template lang="html">
   <div class="page">
-    <div class="header-box">
-      <h1>STATE CAPITAL GUESSING GAME</h1>
-    </div>
-    <div class="map">
+    <section class="section header-box">
+      <h1 class="is-size-3">STATE CAPITAL GUESSING GAME</h1>
+    </section>
+    <section class="section map">
       <!-- width="959" height="593" viewBox="-50 -100 1000 1000" -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -740,17 +740,17 @@
           d="m 215,493 v 55 l 36,45 m -251,-168 h 147 l 68,68 h 85 l 54,54 v 46"
         />
       </svg>
-    </div>
+    </section>
     <div v-if="showInput" class="player-input" id="input-box">
-      <input
+      <b-input
         v-model="playerInput"
         @keyup.enter="checkCorrect"
         id="playerInput"
         placeholder="Guess a capital"
       />
-      <input type="submit" id="submit" @click="checkCorrect()" />
+      <b-button type="submit" id="submit" @click="checkCorrect()">Submit</b-button>
     </div>
-    <div class="state-output" id="state-output">
+    <div class="output" id="output">
       <h1 id="guess" v-text="stateCapital"></h1>
       <p v-if="notQuiteBool" v-text="notQuite"></p>
     </div>
@@ -760,7 +760,7 @@
     </div>
 
     <div class="reset">
-      <button @click="resetMap" id="reset">Reset</button>
+      <b-button @click="resetMap" id="reset">Reset</b-button>
     </div>
   </div>
 </template>
@@ -933,7 +933,7 @@ onMounted(async () => {
 </script>
 <style lang="css" scoped>
 page {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Bold', sans-serif;
   overflow: scroll;
   height: 100svh;
   width: 100svw;
@@ -944,7 +944,6 @@ page {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2%;
 }
 
 h1 {
@@ -974,7 +973,7 @@ svg path {
   align-items: center;
 }
 
-.state-output {
+.output {
   display: flex;
   flex-direction: column;
   align-items: center;
