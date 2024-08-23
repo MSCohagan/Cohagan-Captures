@@ -22,7 +22,7 @@
         <b-tooltip label="State Capital Guessing Game" position="is-bottom">
           <div>
             <a class="states-link" href="/statesGame">
-              <img src="./assets/europe.svg" class="europe-svg" />
+              <img src="../assets/europe.svg" class="europe-svg" />
             </a>
           </div>
         </b-tooltip>
