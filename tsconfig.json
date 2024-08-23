@@ -12,7 +12,11 @@
     }
   ],
   "compilerOptions": {
-    "types": ["node", "vue"]
+    "types": ["node", "vue"],
+    "esModuleInterop": true,
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "allowSyntheticDefaultImports": true
   },
   "include": ["./**/*"],
   "exclude": ["node_modules", "dist"],
