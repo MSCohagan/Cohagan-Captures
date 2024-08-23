@@ -8,7 +8,14 @@ import vueDevTools from 'vite-plugin-vue-devtools';
 export default defineConfig({
   base: './',
   build: {
-    chunkSizeWarningLimit: 1000 // Set to 1000 kB
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Create a separate chunk for large dependencies
+          vendor: ['vue', 'axios'] // Adjust this based on your actual dependencies
+        }
+      }
+    }
   },
   plugins: [vue(), vueDevTools()],
   resolve: {
