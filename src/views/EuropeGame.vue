@@ -4,7 +4,8 @@
       <h1 class="is-size-3">EUROPEAN CAPITAL GUESSING GAME</h1>
     </section>
     <section class="section map">
-      <svg version="1.1" width="680" height="520" id="svg3157" xmlns="http://www.w3.org/2000/svg">
+      <svg version="1.1" viewBox="100 -30 500 700"
+      style="width: 100%; height: 100%" id="svg3157" xmlns="http://www.w3.org/2000/svg">
         <title id="title4">Countries of Europe</title>
         <defs id="defs3159">
           <clipPath id="clipPath7195">
@@ -410,7 +411,8 @@
         </g>
       </svg>
     </section>
-    <div v-if="showInput" class="player-input" id="input-box">
+    <section class="section">
+      <div v-if="showInput" class="player-input" id="input-box">
       <b-input
         v-model="playerInput"
         @keyup.enter="checkCorrect"
@@ -431,6 +433,7 @@
     <div class="reset">
       <b-button @click="resetMap" id="reset">Reset</b-button>
     </div>
+    </section>
   </section>
 </template>
 <script setup lang="ts">
@@ -632,6 +635,7 @@ svg {
   max-width: 1000px;
   max-height: 1000px;
   fill: #d0d0d0;
+  overflow: visible;
 }
 
 svg path {
@@ -679,7 +683,10 @@ svg path {
 @media (max-width: 700px) {
   h1 {
     font-size: 1em;
-    max-width: 200px;
+  }
+
+  svg {
+    display:block;
   }
 }
 
