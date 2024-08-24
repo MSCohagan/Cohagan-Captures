@@ -638,8 +638,8 @@ h1 {
 }
 
 svg {
-  max-width: 1000px;
-  max-height: 1000px;
+  max-height: 100%;
+  max-width: 100%;
   fill: #d0d0d0;
   overflow: visible;
 }
